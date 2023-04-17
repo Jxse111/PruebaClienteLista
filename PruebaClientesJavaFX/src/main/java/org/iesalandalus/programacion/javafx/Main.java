@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import javafx.scene.layout.VBox;
 
 public class Main extends Application {
+	Cliente cliente;
 
 	@Override
 	public void start(Stage escenarioPrincipal) {
@@ -20,8 +21,7 @@ public class Main extends Application {
 			raiz.setSpacing(10);
 			
 			Label lbselecciona = new Label("Selecciona los complementos:");
-			ListView<String> lvComplementos = new ListView<>(FXCollections.observableArrayList(
-					"Cliente1","Cliente2","Cliente3","Cliente4","Cliente5"));
+			ListView<Cliente> lvComplementos = new ListView<>(FXCollections.observableArrayList(cliente = new Cliente("José", "78270500M" , "644497129")));
 			
 			lvComplementos.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 			
